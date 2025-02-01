@@ -1,0 +1,11 @@
+Coloca una imagen como icono de carpeta
+
+Se necesita instalar ImageMagick y librsvg-utils,
+
+Instalacion:
+
+ejecuta el script instalar
+
+uso:
+
+Coloca una imagen llamada .cover/cover .folder/folder .logo/logo con la extension jpg/png/svg.

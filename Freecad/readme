@@ -1,0 +1,22 @@
+Installation:
+- This executable file should be on the PATH so it can be found
+    "$ sudo cp freecad-thumbnailer /usr/bin"
+  and must have execution rights
+    "$ sudo chmod +x /usr/bin/freecad-thumbnailer"
+
+- If a FreeCAD project file doesn't include a thumbnail the file org.freecad.FreeCAD.png is used.
+  Thus, the file src/Gui/Icons/freecad-icon-48.png must be installed.
+    "$ sudo cp freecad-icon-48.png /usr/share/icons/hicolor/48x48/apps/org.freecad.FreeCAD.png"
+
+- The application/x-extension-fcstd MIME type should be registered
+    Check that a corresponding /usr/share/mime/packages/freecad.xml file exists
+    Make sure the MIME database is up to date
+    "$ sudo update-mime-database /usr/share/mime"
+
+- Register this thumbnailer
+    Adding a file /usr/share/thumbnailers/FreeCAD.thumbnailer with the following content:
+
+    [Thumbnailer Entry]
+    TryExec=freecad-thumbnailer
+    Exec=freecad-thumbnailer -s %s %i %o
+    MimeType=application/x-extension-fcstd;

@@ -2,7 +2,7 @@
 from sys import argv
 from zipfile import ZipFile
 
-THUMBNAIL_FILENAME = 'Metadata/thumbnail.png'
+THUMBNAIL_FILENAME = 'Metadata/plate_1.png'
 
 with ZipFile(argv[1], 'r') as zip:
     if THUMBNAIL_FILENAME in zip.namelist():
